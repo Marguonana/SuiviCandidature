@@ -1,10 +1,21 @@
 package fr.miage.victimeratp.classe;
 
-public class Candidat {
-	private String nom;
-	private String prenom;
+import java.io.File;
+
+public class Candidat extends Personne {
 	private int age;
-	private String sexe;
+	private File cvCandidat;
 	
+	public Candidat(String nom, String prenom, int age, String adresseMail, File cvCandidat){
+		super(nom,prenom,adresseMail);
+		this.age = age;
+		this.cvCandidat = cvCandidat;		
+	}
+	
+	public int getAge(){return this.age;}
+	public File getCvCandidat(){ return this.cvCandidat; }
+	
+	
+
 
 }

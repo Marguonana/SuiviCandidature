@@ -7,6 +7,7 @@ import fr.miage.victimeratp.exception.AgeInvalideException;
 
 public class Candidat extends Personne {
 	private int age;
+	private boolean diplomeLicenceValide;
 	private File cvCandidat;
 	private static final int age_min_candidat = 20;
 	private static final int age_max_candidat = 40;
@@ -20,6 +21,7 @@ public class Candidat extends Personne {
 	
 	public int getAge(){return this.age;}
 	public File getCvCandidat(){ return this.cvCandidat; }
+	public boolean getDiplomeValide() {return this.diplomeLicenceValide; }
 	
 	
 	// Revoir age min et age max
@@ -37,6 +39,8 @@ public class Candidat extends Personne {
 			cvCandidat = cv;
 			
 	}
+	
+	public void setDiplomeValide(boolean validite) { this.diplomeLicenceValide = validite; }
 
 
 }

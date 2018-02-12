@@ -13,31 +13,16 @@
   
  
     <mvc:annotation-driven />
-    <context:component-scan base-package="Mettre notre package controller ici" />
-   
-   <!--  Pour ne plus avoir besoin de mettre XXXX.jsp pour chacune de nos requestMapping
+    <context:component-scan base-package="fr.miage.victimeratp.controller" />
+    
+ 
+
+    <!--  Pour ne plus avoir besoin de mettre XXXX.jsp pour chacune de nos requestMapping
    		Par defaut ce sont toutes des .jsp venant de /pages/ -->
      <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/pages/" />
+		<property name="prefix" value="/vues/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
- 
- 
-<bean id="tilesViewResolver"
-        class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass">
-            <value>
-                org.springframework.web.servlet.view.tiles2.TilesView
-            </value>
-        </property>
-    </bean>
-    <bean id="tilesConfigurer"
-        class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
-        <property name="definitions">
-            <list>
-                <value>/WEB-INF/tiles-defs.xml</value>
-            </list>
-        </property>
-    </bean>
+    
 </beans>
